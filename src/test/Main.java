@@ -1,6 +1,6 @@
 import lab4.Author;
-import lab4.Book;
 import lab5.Database;
+import lab5.Novel;
 
 import java.util.ArrayList;
 
@@ -12,12 +12,12 @@ public class Main
                                    "felix",
                                    "0000");
 
-        ArrayList<Book> booksWithTitleMoreThan20Char = db.getBooks(
+        ArrayList<Novel> novelsTitleMoreThan20Char = db.getNovels(
                 "WHERE LENGTH(title) > 20");
-        System.out.println("------ Books with title more than 20 char ------");
-        for(Book book : booksWithTitleMoreThan20Char)
+        System.out.println("------ Novels with title more than 20 char ------");
+        for(Novel novel : novelsTitleMoreThan20Char)
         {
-            System.out.println(book);
+            System.out.println(novel);
         }
 
         ArrayList<Author> authorsBornBefore1900 = db.getAuthors(
