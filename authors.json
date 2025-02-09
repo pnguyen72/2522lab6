@@ -1,0 +1,639 @@
+[
+  {
+    "first_name": "Saul",
+    "last_name": "Bellow",
+    "date_of_birth": "1915-06-10",
+    "date_of_death": "2005-04-05",
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Penn Warren",
+    "date_of_birth": "1905-04-24",
+    "date_of_death": "1989-09-15",
+    "genre": "Southern Literature"
+  },
+  {
+    "first_name": "Philip",
+    "last_name": "Roth",
+    "date_of_birth": "1933-03-19",
+    "date_of_death": "2018-05-22",
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Theodore",
+    "last_name": "Dreiser",
+    "date_of_birth": "1871-08-27",
+    "date_of_death": "1945-12-28",
+    "genre": "Naturalism"
+  },
+  {
+    "first_name": "George",
+    "last_name": "Orwell",
+    "date_of_birth": "1903-06-25",
+    "date_of_death": "1950-01-21",
+    "genre": "Dystopian Fiction"
+  },
+  {
+    "first_name": "John",
+    "last_name": "O'Hara",
+    "date_of_birth": "1905-01-31",
+    "date_of_death": "1970-04-11",
+    "genre": "Realism"
+  },
+  {
+    "first_name": "Judy",
+    "last_name": "Blume",
+    "date_of_birth": "1938-02-12",
+    "date_of_death": null,
+    "genre": "Young Adult Fiction"
+  },
+  {
+    "first_name": "Bernard",
+    "last_name": "Malamud",
+    "date_of_birth": "1914-04-26",
+    "date_of_death": "1986-03-18",
+    "genre": "Jewish American Literature"
+  },
+  {
+    "first_name": "Flann",
+    "last_name": "O'Brien",
+    "date_of_birth": "1911-10-05",
+    "date_of_death": "1966-04-01",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Ian",
+    "last_name": "McEwan",
+    "date_of_birth": "1948-06-21",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Toni",
+    "last_name": "Morrison",
+    "date_of_birth": "1931-02-18",
+    "date_of_death": "2019-08-05",
+    "genre": "African American Literature"
+  },
+  {
+    "first_name": "Christopher",
+    "last_name": "Isherwood",
+    "date_of_birth": "1904-08-26",
+    "date_of_death": "1986-01-04",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Raymond",
+    "last_name": "Chandler",
+    "date_of_birth": "1888-07-23",
+    "date_of_death": "1959-03-26",
+    "genre": "Hardboiled Fiction"
+  },
+  {
+    "first_name": "Margaret",
+    "last_name": "Atwood",
+    "date_of_birth": "1939-11-18",
+    "date_of_death": null,
+    "genre": "Speculative Fiction"
+  },
+  {
+    "first_name": "Cormac",
+    "last_name": "McCarthy",
+    "date_of_birth": "1933-07-20",
+    "date_of_death": "2023-06-13",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "Evelyn",
+    "last_name": "Waugh",
+    "date_of_birth": "1903-10-28",
+    "date_of_death": "1966-04-10",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Thornton",
+    "last_name": "Wilder",
+    "date_of_birth": "1897-04-17",
+    "date_of_death": "1975-12-07",
+    "genre": "Drama"
+  },
+  {
+    "first_name": "Henry",
+    "last_name": "Roth",
+    "date_of_birth": "1906-02-08",
+    "date_of_death": "1995-10-13",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Joseph",
+    "last_name": "Heller",
+    "date_of_birth": "1923-05-01",
+    "date_of_death": "1999-12-12",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "J.D.",
+    "last_name": "Salinger",
+    "date_of_birth": "1919-01-01",
+    "date_of_death": "2010-01-27",
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Anthony",
+    "last_name": "Burgess",
+    "date_of_birth": "1917-02-25",
+    "date_of_death": "1993-11-25",
+    "genre": "Dystopian Fiction"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Styron",
+    "date_of_birth": "1925-06-11",
+    "date_of_death": "2006-11-01",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "Jonathan",
+    "last_name": "Franzen",
+    "date_of_birth": "1959-08-17",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Thomas",
+    "last_name": "Pynchon",
+    "date_of_birth": "1937-05-08",
+    "date_of_death": null,
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Anthony",
+    "last_name": "Powell",
+    "date_of_birth": "1905-12-21",
+    "date_of_death": "2000-03-28",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Nathanael",
+    "last_name": "West",
+    "date_of_birth": "1903-10-17",
+    "date_of_death": "1940-12-22",
+    "genre": "Black Comedy"
+  },
+  {
+    "first_name": "Willa",
+    "last_name": "Cather",
+    "date_of_birth": "1873-12-07",
+    "date_of_death": "1947-04-24",
+    "genre": "Regionalism"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Agee",
+    "date_of_birth": "1909-11-27",
+    "date_of_death": "1955-05-16",
+    "genre": "Journalism"
+  },
+  {
+    "first_name": "Elizabeth",
+    "last_name": "Bowen",
+    "date_of_birth": "1899-06-07",
+    "date_of_death": "1973-02-22",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Dickey",
+    "date_of_birth": "1923-02-02",
+    "date_of_death": "1997-01-19",
+    "genre": "Poetry"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Stone",
+    "date_of_birth": "1937-08-21",
+    "date_of_death": "2015-01-10",
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Cheever",
+    "date_of_birth": "1912-05-27",
+    "date_of_death": "1982-06-18",
+    "genre": "Short Stories"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Fowles",
+    "date_of_birth": "1926-03-31",
+    "date_of_death": "2005-11-05",
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Doris",
+    "last_name": "Lessing",
+    "date_of_birth": "1919-10-22",
+    "date_of_death": "2013-11-17",
+    "genre": "Feminist Literature"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Baldwin",
+    "date_of_birth": "1924-08-02",
+    "date_of_death": "1987-12-01",
+    "genre": "African American Literature"
+  },
+  {
+    "first_name": "Margaret",
+    "last_name": "Mitchell",
+    "date_of_birth": "1900-11-08",
+    "date_of_death": "1949-08-16",
+    "genre": "Historical Fiction"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Steinbeck",
+    "date_of_birth": "1902-02-27",
+    "date_of_death": "1968-12-20",
+    "genre": "Realism"
+  },
+  {
+    "first_name": "F. Scott",
+    "last_name": "Fitzgerald",
+    "date_of_birth": "1896-09-24",
+    "date_of_death": "1940-12-21",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Carson",
+    "last_name": "McCullers",
+    "date_of_birth": "1917-02-19",
+    "date_of_death": "1967-09-29",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "Graham",
+    "last_name": "Greene",
+    "date_of_birth": "1904-10-02",
+    "date_of_death": "1991-04-03",
+    "genre": "Thriller"
+  },
+  {
+    "first_name": "Marilynne",
+    "last_name": "Robinson",
+    "date_of_birth": "1943-11-26",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "V.S.",
+    "last_name": "Naipaul",
+    "date_of_birth": "1932-08-17",
+    "date_of_death": "2018-08-11",
+    "genre": "Postcolonial Literature"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Graves",
+    "date_of_birth": "1895-07-24",
+    "date_of_death": "1985-12-07",
+    "genre": "Historical Fiction"
+  },
+  {
+    "first_name": "David Foster",
+    "last_name": "Wallace",
+    "date_of_birth": "1962-02-21",
+    "date_of_death": "2008-09-12",
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Ralph",
+    "last_name": "Ellison",
+    "date_of_birth": "1914-03-01",
+    "date_of_death": "1994-04-16",
+    "genre": "African American Literature"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Faulkner",
+    "date_of_birth": "1897-09-25",
+    "date_of_death": "1962-07-06",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "C.S.",
+    "last_name": "Lewis",
+    "date_of_birth": "1898-11-29",
+    "date_of_death": "1963-11-22",
+    "genre": "Fantasy"
+  },
+  {
+    "first_name": "Vladimir",
+    "last_name": "Nabokov",
+    "date_of_birth": "1899-04-22",
+    "date_of_death": "1977-07-02",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Golding",
+    "date_of_birth": "1911-09-19",
+    "date_of_death": "1993-06-19",
+    "genre": "Allegory"
+  },
+  {
+    "first_name": "J.R.R.",
+    "last_name": "Tolkien",
+    "date_of_birth": "1892-01-03",
+    "date_of_death": "1973-09-02",
+    "genre": "Fantasy"
+  },
+  {
+    "first_name": "Henry",
+    "last_name": "Green",
+    "date_of_birth": "1905-10-29",
+    "date_of_death": "1973-12-13",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Kingsley",
+    "last_name": "Amis",
+    "date_of_birth": "1922-04-16",
+    "date_of_death": "1995-10-22",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Christina",
+    "last_name": "Stead",
+    "date_of_birth": "1902-07-17",
+    "date_of_death": "1983-03-31",
+    "genre": "Realism"
+  },
+  {
+    "first_name": "Salman",
+    "last_name": "Rushdie",
+    "date_of_birth": "1947-06-19",
+    "date_of_death": null,
+    "genre": "Magical Realism"
+  },
+  {
+    "first_name": "Martin",
+    "last_name": "Amis",
+    "date_of_birth": "1949-08-25",
+    "date_of_death": null,
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Walker",
+    "last_name": "Percy",
+    "date_of_birth": "1916-05-28",
+    "date_of_death": "1990-05-10",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "Virginia",
+    "last_name": "Woolf",
+    "date_of_birth": "1882-01-25",
+    "date_of_death": "1941-03-28",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Burroughs",
+    "date_of_birth": "1914-02-05",
+    "date_of_death": "1997-08-02",
+    "genre": "Beat Generation"
+  },
+  {
+    "first_name": "Richard",
+    "last_name": "Wright",
+    "date_of_birth": "1908-09-04",
+    "date_of_death": "1960-11-28",
+    "genre": "African American Literature"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Gibson",
+    "date_of_birth": "1948-03-17",
+    "date_of_death": null,
+    "genre": "Cyberpunk"
+  },
+  {
+    "first_name": "Kazuo",
+    "last_name": "Ishiguro",
+    "date_of_birth": "1954-11-08",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Jack",
+    "last_name": "Kerouac",
+    "date_of_birth": "1922-03-12",
+    "date_of_death": "1969-10-21",
+    "genre": "Beat Generation"
+  },
+  {
+    "first_name": "Ken",
+    "last_name": "Kesey",
+    "date_of_birth": "1935-09-17",
+    "date_of_death": "2001-11-10",
+    "genre": "Counterculture"
+  },
+  {
+    "first_name": "Jerzy",
+    "last_name": "Kosinski",
+    "date_of_birth": "1933-06-14",
+    "date_of_death": "1991-05-03",
+    "genre": "Psychological Fiction"
+  },
+  {
+    "first_name": "E.M.",
+    "last_name": "Forster",
+    "date_of_birth": "1879-01-01",
+    "date_of_death": "1970-06-07",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Joan",
+    "last_name": "Didion",
+    "date_of_birth": "1934-12-05",
+    "date_of_death": "2021-12-23",
+    "genre": "Journalism"
+  },
+  {
+    "first_name": "A.S.",
+    "last_name": "Byatt",
+    "date_of_birth": "1936-08-24",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Muriel",
+    "last_name": "Spark",
+    "date_of_birth": "1918-02-01",
+    "date_of_death": "2006-04-13",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Updike",
+    "date_of_birth": "1932-03-18",
+    "date_of_death": "2009-01-27",
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "E.L.",
+    "last_name": "Doctorow",
+    "date_of_birth": "1931-01-06",
+    "date_of_death": "2015-07-21",
+    "genre": "Historical Fiction"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Gaddis",
+    "date_of_birth": "1922-12-29",
+    "date_of_death": "1998-12-16",
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Dashiell",
+    "last_name": "Hammett",
+    "date_of_birth": "1894-05-27",
+    "date_of_death": "1961-01-10",
+    "genre": "Hardboiled Fiction"
+  },
+  {
+    "first_name": "Richard",
+    "last_name": "Yates",
+    "date_of_birth": "1926-02-03",
+    "date_of_death": "1992-11-07",
+    "genre": "Realism"
+  },
+  {
+    "first_name": "Paul",
+    "last_name": "Bowles",
+    "date_of_birth": "1910-12-30",
+    "date_of_death": "1999-11-18",
+    "genre": "Existentialism"
+  },
+  {
+    "first_name": "Kurt",
+    "last_name": "Vonnegut",
+    "date_of_birth": "1922-11-11",
+    "date_of_death": "2007-04-11",
+    "genre": "Satire"
+  },
+  {
+    "first_name": "Neal",
+    "last_name": "Stephenson",
+    "date_of_birth": "1959-10-31",
+    "date_of_death": null,
+    "genre": "Science Fiction"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Barth",
+    "date_of_birth": "1930-05-27",
+    "date_of_death": null,
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Richard",
+    "last_name": "Ford",
+    "date_of_birth": "1944-02-16",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "John",
+    "last_name": "le Carré",
+    "date_of_birth": "1931-10-19",
+    "date_of_death": "2020-12-12",
+    "genre": "Spy Fiction"
+  },
+  {
+    "first_name": "Ernest",
+    "last_name": "Hemingway",
+    "date_of_birth": "1899-07-21",
+    "date_of_death": "1961-07-02",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Zora Neale",
+    "last_name": "Hurston",
+    "date_of_birth": "1891-01-07",
+    "date_of_death": "1960-01-28",
+    "genre": "African American Literature"
+  },
+  {
+    "first_name": "Chinua",
+    "last_name": "Achebe",
+    "date_of_birth": "1930-11-16",
+    "date_of_death": "2013-03-21",
+    "genre": "Postcolonial Literature"
+  },
+  {
+    "first_name": "Harper",
+    "last_name": "Lee",
+    "date_of_birth": "1926-04-28",
+    "date_of_death": "2016-02-19",
+    "genre": "Southern Gothic"
+  },
+  {
+    "first_name": "Henry",
+    "last_name": "Miller",
+    "date_of_birth": "1891-12-26",
+    "date_of_death": "1980-06-07",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Philip K.",
+    "last_name": "Dick",
+    "date_of_birth": "1928-12-16",
+    "date_of_death": "1982-03-02",
+    "genre": "Science Fiction"
+  },
+  {
+    "first_name": "Iris",
+    "last_name": "Murdoch",
+    "date_of_birth": "1919-07-15",
+    "date_of_death": "1999-02-08",
+    "genre": "Philosophical Fiction"
+  },
+  {
+    "first_name": "Malcolm",
+    "last_name": "Lowry",
+    "date_of_birth": "1909-07-28",
+    "date_of_death": "1957-06-27",
+    "genre": "Modernism"
+  },
+  {
+    "first_name": "Alan",
+    "last_name": "Moore",
+    "date_of_birth": "1953-11-18",
+    "date_of_death": null,
+    "genre": "Graphic Novels"
+  },
+  {
+    "first_name": "Don",
+    "last_name": "DeLillo",
+    "date_of_birth": "1936-11-20",
+    "date_of_death": null,
+    "genre": "Postmodern Fiction"
+  },
+  {
+    "first_name": "Zadie",
+    "last_name": "Smith",
+    "date_of_birth": "1975-10-25",
+    "date_of_death": null,
+    "genre": "Literary Fiction"
+  },
+  {
+    "first_name": "Jean",
+    "last_name": "Rhys",
+    "date_of_birth": "1890-08-24",
+    "date_of_death": "1979-05-14",
+    "genre": "Modernism"
+  }
+]
