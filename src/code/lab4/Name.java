@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.lab4;
+package lab4;
 
 /**
  * Represents a bank client's name with formatting methods

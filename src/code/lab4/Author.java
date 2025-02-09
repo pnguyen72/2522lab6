@@ -1,6 +1,6 @@
-package ca.bcit.comp2522.lab4;
+package lab4;
 
-import ca.bcit.comp2522.lab1.Date;
+import lab1.Date;
 
 /**
  * Represents an Author, extending the Person class with an additional genre

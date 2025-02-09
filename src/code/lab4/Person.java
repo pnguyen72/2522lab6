@@ -1,6 +1,6 @@
-package ca.bcit.comp2522.lab4;
+package lab4;
 
-import ca.bcit.comp2522.lab1.Date;
+import lab1.Date;
 
 /**
  * Represents a Person with a name, date of birth, and optionally, a date of

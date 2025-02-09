@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.lab4;
+package lab4;
 
 /**
  * A Printable class must implement {@code void display()}

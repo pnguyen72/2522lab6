@@ -1,6 +1,6 @@
-package ca.bcit.comp2522.lab1;
+package lab1;
 
-import ca.bcit.comp2522.lab4.Printable;
+import lab4.Printable;
 
 /**
  * Represents a date, with the capability of calculating the day of week.

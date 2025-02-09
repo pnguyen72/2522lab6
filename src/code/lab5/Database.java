@@ -1,9 +1,9 @@
-package ca.bcit.comp2522.lab5;
+package lab5;
 
-import ca.bcit.comp2522.lab1.Date;
-import ca.bcit.comp2522.lab4.Author;
-import ca.bcit.comp2522.lab4.Book;
-import ca.bcit.comp2522.lab4.Name;
+import lab1.Date;
+import lab4.Author;
+import lab4.Book;
+import lab4.Name;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -159,7 +159,6 @@ public class Database
             resultSet = statement.executeQuery(query);
             while(resultSet.next())
             {
-
                 authors.add(getAuthor(resultSet));
             }
         } catch(final SQLException e)

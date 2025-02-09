@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.lab4;
+package lab4;
 
 /**
  * Describes a book object. Contains constructor with
@@ -45,7 +45,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @throws IllegalArgumentException if invalid based
      * on the above parameters.
      */
-    private final void validateTitle(final String title)
+    private void validateTitle(final String title)
     {
         if(title.length() > LONGEST_TITLE_CHARACTERS ||
            title == null ||
@@ -66,7 +66,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @throws IllegalArgumentException if invalid based
      * on the above parameters.
      */
-    private final void validateAuthor(final Author author)
+    private void validateAuthor(final Author author)
     {
         if(author == null)
         {
@@ -83,7 +83,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @throws IllegalArgumentException if invalid based
      * on the above parameters.
      */
-    private final void validateYearPublished(final int yearPublished)
+    private void validateYearPublished(final int yearPublished)
     {
         if(yearPublished <= 1 ||
            yearPublished > CURRENT_YEAR)

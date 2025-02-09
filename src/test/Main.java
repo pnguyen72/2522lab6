@@ -1,6 +1,6 @@
-import ca.bcit.comp2522.lab4.Author;
-import ca.bcit.comp2522.lab4.Book;
-import ca.bcit.comp2522.lab5.Database;
+import lab4.Author;
+import lab4.Book;
+import lab5.Database;
 
 import java.util.ArrayList;
 
