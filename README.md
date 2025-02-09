@@ -1,4 +1,4 @@
-How to import MySQl data:
+How to import MySQL data:
 
 1. Create a local MySQL database.
 
