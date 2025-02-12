@@ -4,7 +4,8 @@ import lab4.Author;
 import lab4.Book;
 
 /**
- * Extends Book from lab 4 with zero changes.
+ * Extends Book from lab 4,
+ * overrides compareTo to use titles alphabetical order.
  *
  * @author Felix
  * @author Angelo
@@ -25,5 +26,11 @@ public class Novel extends Book
                  final int yearPublished)
     {
         super(title, author, yearPublished);
+    }
+
+    @Override
+    public int compareTo(Book other)
+    {
+        return getTitle().compareTo(other.getTitle());
     }
 }
