@@ -8,6 +8,29 @@ const connection = await mysql.createConnection({
   database: DATABASE_NAME,
 });
 
+async function setupTables() {
+  await connection.query("DROP TABLE IF EXISTS author, book");
+  await connection.query(`
+    CREATE TABLE author (
+      id          INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+      firstName   VARCHAR(49) NOT NULL,
+      lastName    VARCHAR(49) NOT NULL,
+      genre       VARCHAR(29) NOT NULL,
+      dateOfBirth DATE NOT NULL,
+      dateOfDeath DATE
+    )
+  `);
+  await connection.query(`
+    CREATE TABLE book (
+      id            INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+      title         TEXT NOT NULL,
+      author        INT NOT NULL,
+      yearPublished INT NOT NULL,
+      FOREIGN KEY (author) REFERENCES author(id)
+    )
+  `);
+}
+
 async function addAuthor(fname, lname, dob, dod, genre) {
   if (dod != null)
     await connection.query(`
@@ -27,32 +50,29 @@ async function addAuthor(fname, lname, dob, dod, genre) {
     `);
   else
     await connection.query(`
-    insert into author (
-      firstName,
-      lastName,
-      dateOfBirth,
-      genre
-    ) values (
-      "${fname}",
-      "${lname}",
-      "${dob}",
-      "${genre}"
-    )
+      insert into author (
+        firstName,
+        lastName,
+        dateOfBirth,
+        genre
+      ) values (
+        "${fname}",
+        "${lname}",
+        "${dob}",
+        "${genre}"
+      )
     `);
 }
 
-async function getAuthorIdByFullName(fullName) {
-  return await connection
+function getAuthorIdByFullName(fullName) {
+  return connection
     .query(
       `
       select id from author
       where "${fullName}" like concat(firstName, '%', lastName)
       `
     )
-    .then(([result]) => {
-      console.log(fullName);
-      return result[0].id;
-    });
+    .then(([result]) => result[0].id);
 }
 
 async function addBook(title, author, year) {
@@ -96,6 +116,7 @@ async function addBooks() {
   await Promise.all(promises);
 }
 
+await setupTables();
 await addAuthors();
 await addBooks();
 
