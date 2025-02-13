@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lab4.*;
-
 /**
  * Contains a list of many novels and
  * methods to manipulate them,
@@ -41,9 +39,9 @@ public class BookStore
             !!!!! REPLACE THE PARAMETERS WITH YOUR LOCAL DB DATA !!!!!
             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          */
-        db = new Database("db_name",
-                          "test",
-                          "1234");
+        db = new Database(Credentials.getDatabaseName(),
+                          Credentials.getUser(),
+                          Credentials.getPassword());
 
         this.name   = name;
         this.novels = db.getNovels();
@@ -248,7 +246,7 @@ public class BookStore
         bookstore.getLongest();
 
         System.out.println("\nIs there a book written in 1950?");
-        System.out.println(bookstore.isThereABookWrittenBetween(1950));
+        System.out.println(bookstore.isThereABookWrittenIn(1950));
 
         System.out.println("\nHow many books contain 'heart'?");
         System.out.println(bookstore.howManyBooksContain("heart"));
@@ -260,7 +258,6 @@ public class BookStore
         System.out.println(oldest.getTitle() + " by " + oldest.getAuthorName() + ", " + oldest.getYearPublished());
 
         System.out.println("\nBooks with titles 15 characters long:");
-        fifteenCharTitles = bookstore.getBooksThisLength(15);
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
     }
 };
