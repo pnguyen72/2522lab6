@@ -132,7 +132,9 @@ public class BookStore
             }
         }
 
-        System.out.println("Longest Book Title: " + longestNovelTitle.getTitle());
+        System.out.println(longestNovelTitle +
+                           " by " + longestNovelTitle.getAuthorName() +
+                           ", " + longestNovelTitle.getYearPublished());
     }
 
     /**
