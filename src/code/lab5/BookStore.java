@@ -94,7 +94,7 @@ public class BookStore
      * @param word to be searched in titles as a String
      * @return the total Books that contain the word in their titles as an int
      */
-    int howManyBooksContain(final String word)
+    public int howManyBooksContain(final String word)
     {
         int count = COUNTER_INITIATOR;
         for(final Novel novel: novels)
@@ -114,7 +114,7 @@ public class BookStore
      * @param last year of the range inclusive
      * @return the percentage as a double
      */
-    double whichPercentWrittenBetween(final int first, final int last)
+    public double whichPercentWrittenBetween(final int first, final int last)
     {
         int count = COUNTER_INITIATOR;
         for(final Novel novel: novels)
@@ -126,6 +126,32 @@ public class BookStore
             }
         }
         return ((double) count / novels.size()) * PERCENT_MULTIPLIER;
+    }
+
+    public Novel getOldestBook()
+    {
+
+    }
+
+    /**
+     * Gets length as a parameter and returns a List of novels which the titles has the same length
+     * as this parameter
+     * @param length of the titles to be added to the List
+     * @return the List of books
+     */
+    public List<Novel> getBooksThisLength(final int length)
+    {
+        final List<Novel> booksThisLength;
+        booksThisLength = new ArrayList<Novel>();
+
+        for(final Novel novel : novels)
+        {
+            if(novel.getTitle().length() == length)
+            {
+                booksThisLength.add(novel);
+            }
+        }
+        return booksThisLength;
     }
 
     public static void main(final String[] args)
