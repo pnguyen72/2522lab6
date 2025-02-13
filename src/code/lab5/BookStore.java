@@ -18,6 +18,8 @@ import lab4.*;
  */
 public class BookStore
 {
+    private static final int COUNTER_INITIATOR = 0;
+
     private final String           name;
     private final ArrayList<Novel> novels;
 
@@ -84,6 +86,24 @@ public class BookStore
         {
             System.out.println(novel);
         }
+    }
+
+    /**
+     * Counts how many books contain the word (passed as a parameter) in their title.
+     * @param word to be searched in titles as a String
+     * @return the total Books that contain the word in their titles as an int
+     */
+    int howManyBooksContain(final String word)
+    {
+        int count = COUNTER_INITIATOR;
+        for(final Novel novel: novels)
+        {
+            if(novel.getTitle().toLowerCase().contains(word.toLowerCase()))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void main(final String[] args)
