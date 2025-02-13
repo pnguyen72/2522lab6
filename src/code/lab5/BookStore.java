@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class BookStore
 {
-    private static final int COUNTER_INITIATOR = 0;
+    private static final int COUNTER_INITIATOR  = 0;
     private static final int PERCENT_MULTIPLIER = 100;
     public static final int ROUND_TO_TEN = 10;
 
@@ -27,7 +27,7 @@ public class BookStore
      * Constructs a Bookstore instance,
      * imports a list of novels from MySQL.
      *
-     * @param name String, the bookstore's name
+     * @param name the bookstore's name
      */
     public BookStore(final String name)
     {
@@ -89,12 +89,17 @@ public class BookStore
         }
     }
 
+    /**
+     * Prints all books published in the specified decade, i.e. 2000s
+     *
+     * @param decade the specified decade
+     */
     public final void printGroupByDecade(final int decade)
     {
         List<Novel> novelsByDecade;
-        int decadeNormalized;
+        int         decadeNormalized;
 
-        novelsByDecade = new ArrayList<>();
+        novelsByDecade   = new ArrayList<>();
         decadeNormalized = decade / ROUND_TO_TEN;
 
         for(final Novel novel : novels)
@@ -111,12 +116,15 @@ public class BookStore
         }
     }
 
+    /**
+     * Finds the longest title in the bookstore.
+     */
     public final void getLongest()
     {
         Novel longestNovelTitle;
         longestNovelTitle = novels.getFirst();
 
-        for (final Novel novel : novels)
+        for(final Novel novel : novels)
         {
             if(novel.getTitle().length() > longestNovelTitle.getTitle().length())
             {
@@ -127,9 +135,15 @@ public class BookStore
         System.out.println("Longest Book Title: " + longestNovelTitle.getTitle());
     }
 
+    /**
+     * Returns if there is a book written in a specified year
+     *
+     * @param year the year
+     * @return true or false
+     */
     public final boolean isThereABookWrittenIn(final int year)
     {
-        for (final Novel novel : novels)
+        for(final Novel novel : novels)
         {
             if(novel.getYearPublished() == year)
             {
@@ -142,14 +156,16 @@ public class BookStore
 
 
     /**
-     * Counts how many books contain the word (passed as a parameter) in their title.
+     * Counts how many books contain the word (passed as a parameter) in
+     * their title.
+     *
      * @param word to be searched in titles as a String
      * @return the total Books that contain the word in their titles as an int
      */
     public int howManyBooksContain(final String word)
     {
         int count = COUNTER_INITIATOR;
-        for(final Novel novel: novels)
+        for(final Novel novel : novels)
         {
             if(novel.getTitle().toLowerCase().contains(word.toLowerCase()))
             {
@@ -160,16 +176,19 @@ public class BookStore
     }
 
     /**
-     * Gets 2 years as parameters and calculates the percentage of books that were written
+     * Gets 2 years as parameters and calculates the percentage of books that
+     * were written
      * between those two years, inclusive.
+     *
      * @param first year of the range inclusive
-     * @param last year of the range inclusive
+     * @param last  year of the range inclusive
      * @return the percentage as a double
      */
-    public double whichPercentWrittenBetween(final int first, final int last)
+    public double whichPercentWrittenBetween(final int first,
+                                             final int last)
     {
         int count = COUNTER_INITIATOR;
-        for(final Novel novel: novels)
+        for(final Novel novel : novels)
         {
             if(novel.getYearPublished() >= first &&
                novel.getYearPublished() <= last)
@@ -182,6 +201,7 @@ public class BookStore
 
     /**
      * Returns the oldest book in our book store.
+     *
      * @return the oldest book
      */
     public Novel getOldestBook()
@@ -194,8 +214,10 @@ public class BookStore
     }
 
     /**
-     * Gets length as a parameter and returns a List of novels which the titles has the same length
+     * Gets length as a parameter and returns a List of novels which the
+     * titles has the same length
      * as this parameter
+     *
      * @param length of the titles to be added to the List
      * @return the List of books
      */
@@ -214,14 +236,19 @@ public class BookStore
         return booksThisLength;
     }
 
+    /**
+     * Runs the program.
+     *
+     * @param args unused
+     */
     public static void main(final String[] args)
     {
         final BookStore   bookstore;
         final Novel       oldest;
         final List<Novel> fifteenCharTitles;
 
-        bookstore = new BookStore("Classic Novels Collection");
-        oldest = bookstore.getOldestBook();
+        bookstore         = new BookStore("Classic Novels Collection");
+        oldest            = bookstore.getOldestBook();
         fifteenCharTitles = bookstore.getBooksThisLength(15);
 
         System.out.println("All Titles in UPPERCASE:");
@@ -245,7 +272,8 @@ public class BookStore
         System.out.println("\nHow many books contain 'heart'?");
         System.out.println(bookstore.howManyBooksContain("heart"));
 
-        System.out.println("\nPercentage of books written between 1940 and 1950:");
+        System.out.println("\nPercentage of books written between 1940 and " +
+                           "1950:");
         System.out.println(bookstore.whichPercentWrittenBetween(1940, 1950) + "%");
 
         System.out.println("\nOldest book:");
