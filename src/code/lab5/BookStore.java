@@ -35,9 +35,15 @@ public class BookStore
     public BookStore(final String name)
     {
         final Database db;
-        db = new Database("2522lab5",
-                          "felix",
-                          "0000");
+
+        /* TODO:
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            !!!!! REPLACE THE PARAMETERS WITH YOUR LOCAL DB DATA !!!!!
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         */
+        db = new Database("db_name",
+                          "test",
+                          "1234");
 
         this.name   = name;
         this.novels = db.getNovels();
@@ -81,7 +87,7 @@ public class BookStore
      */
     public final void printTitlesInAlphaOrder()
     {
-        List<Novel> sortedNovels;
+        ArrayList<Novel> sortedNovels;
         sortedNovels = novels;
 
         Collections.sort(sortedNovels);
@@ -242,7 +248,7 @@ public class BookStore
         bookstore.getLongest();
 
         System.out.println("\nIs there a book written in 1950?");
-        System.out.println(bookstore.isThereABookWrittenIn(1950));
+        System.out.println(bookstore.isThereABookWrittenBetween(1950));
 
         System.out.println("\nHow many books contain 'heart'?");
         System.out.println(bookstore.howManyBooksContain("heart"));
@@ -254,6 +260,7 @@ public class BookStore
         System.out.println(oldest.getTitle() + " by " + oldest.getAuthorName() + ", " + oldest.getYearPublished());
 
         System.out.println("\nBooks with titles 15 characters long:");
+        fifteenCharTitles = bookstore.getBooksThisLength(15);
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
     }
 };
