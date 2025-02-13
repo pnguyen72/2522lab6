@@ -18,6 +18,9 @@ import lab4.*;
  */
 public class BookStore
 {
+    private static final int COUNTER_INITIATOR = 0;
+    private static final int PERCENT_MULTIPLIER = 100;
+
     private final String           name;
     private final ArrayList<Novel> novels;
 
@@ -139,6 +142,79 @@ public class BookStore
         return false;
     }
 
+
+    /**
+     * Counts how many books contain the word (passed as a parameter) in their title.
+     * @param word to be searched in titles as a String
+     * @return the total Books that contain the word in their titles as an int
+     */
+    public int howManyBooksContain(final String word)
+    {
+        int count = COUNTER_INITIATOR;
+        for(final Novel novel: novels)
+        {
+            if(novel.getTitle().toLowerCase().contains(word.toLowerCase()))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * Gets 2 years as parameters and calculates the percentage of books that were written
+     * between those two years, inclusive.
+     * @param first year of the range inclusive
+     * @param last year of the range inclusive
+     * @return the percentage as a double
+     */
+    public double whichPercentWrittenBetween(final int first, final int last)
+    {
+        int count = COUNTER_INITIATOR;
+        for(final Novel novel: novels)
+        {
+            if(novel.getYearPublished() >= first &&
+               novel.getYearPublished() <= last)
+            {
+                count++;
+            }
+        }
+        return ((double) count / novels.size()) * PERCENT_MULTIPLIER;
+    }
+
+    /**
+     * Returns the oldest book in our book store.
+     * @return the oldest book
+     */
+    public Novel getOldestBook()
+    {
+        ArrayList<Novel> sortedNovels;
+        sortedNovels = novels;
+
+        Collections.sort(sortedNovels);
+        return sortedNovels.getFirst();
+    }
+
+    /**
+     * Gets length as a parameter and returns a List of novels which the titles has the same length
+     * as this parameter
+     * @param length of the titles to be added to the List
+     * @return the List of books
+     */
+    public List<Novel> getBooksThisLength(final int length)
+    {
+        final List<Novel> booksThisLength;
+        booksThisLength = new ArrayList<Novel>();
+
+        for(final Novel novel : novels)
+        {
+            if(novel.getTitle().length() == length)
+            {
+                booksThisLength.add(novel);
+            }
+        }
+        return booksThisLength;
+    }
 
     public static void main(final String[] args)
     {
