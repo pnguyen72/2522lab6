@@ -34,11 +34,6 @@ public class BookStore
     {
         final Database db;
 
-        /* TODO:
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            !!!!! REPLACE THE PARAMETERS WITH YOUR LOCAL DB DATA !!!!!
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-         */
         db = new Database(Credentials.getDatabaseName(),
                           Credentials.getUser(),
                           Credentials.getPassword());
