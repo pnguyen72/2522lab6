@@ -18,11 +18,10 @@ public class BookStore
 {
     private static final int COUNTER_INITIATOR = 0;
     private static final int PERCENT_MULTIPLIER = 100;
+    public static final int ROUND_TO_TEN = 10;
 
     private final String           name;
     private final ArrayList<Novel> novels;
-
-    public static final int ROUND_TO_TEN = 10;
 
     /**
      * Constructs a Bookstore instance,
