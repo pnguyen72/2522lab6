@@ -128,9 +128,17 @@ public class BookStore
         return ((double) count / novels.size()) * PERCENT_MULTIPLIER;
     }
 
+    /**
+     * Returns the oldest book in our book store.
+     * @return the oldest book
+     */
     public Novel getOldestBook()
     {
+        ArrayList<Novel> sortedNovels;
+        sortedNovels = novels;
 
+        Collections.sort(sortedNovels);
+        return sortedNovels.getFirst();
     }
 
     /**
