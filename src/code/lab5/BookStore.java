@@ -19,6 +19,7 @@ import lab4.*;
 public class BookStore
 {
     private static final int COUNTER_INITIATOR = 0;
+    private static final int PERCENT_MULTIPLIER = 100;
 
     private final String           name;
     private final ArrayList<Novel> novels;
@@ -104,6 +105,27 @@ public class BookStore
             }
         }
         return count;
+    }
+
+    /**
+     * Gets 2 years as parameters and calculates the percentage of books that were written
+     * between those two years, inclusive.
+     * @param first year of the range inclusive
+     * @param last year of the range inclusive
+     * @return the percentage as a double
+     */
+    double whichPercentWrittenBetween(final int first, final int last)
+    {
+        int count = COUNTER_INITIATOR;
+        for(final Novel novel: novels)
+        {
+            if(novel.getYearPublished() >= first &&
+               novel.getYearPublished() <= last)
+            {
+                count++;
+            }
+        }
+        return ((double) count / novels.size()) * PERCENT_MULTIPLIER;
     }
 
     public static void main(final String[] args)
