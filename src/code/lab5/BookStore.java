@@ -223,7 +223,7 @@ public class BookStore
 
     /**
      * Gets length as a parameter and returns a List of novels which the
-     * titles has the same length
+     * titles have the same length
      * as this parameter
      *
      * @param length of the titles to be added to the List
