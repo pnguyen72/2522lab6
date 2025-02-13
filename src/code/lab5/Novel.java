@@ -2,6 +2,7 @@ package lab5;
 
 import lab4.Author;
 import lab4.Book;
+import lab4.Name;
 
 /**
  * Extends Book from lab 4,
@@ -28,9 +29,8 @@ public class Novel extends Book
         super(title, author, yearPublished);
     }
 
+    public String getAuthorName() { return getAuthor().getName().toString(); }
+
     @Override
-    public int compareTo(Book other)
-    {
-        return getTitle().compareTo(other.getTitle());
-    }
+    public int compareTo(Book other) { return getTitle().compareTo(other.getTitle()); }
 }

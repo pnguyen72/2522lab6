@@ -21,6 +21,8 @@ public class BookStore
     private final String           name;
     private final ArrayList<Novel> novels;
 
+    public static final int ROUND_TO_TEN = 10;
+
     /**
      * Constructs a Bookstore instance,
      * imports a list of novels from MySQL.
@@ -76,7 +78,7 @@ public class BookStore
      */
     public final void printTitlesInAlphaOrder()
     {
-        ArrayList<Novel> sortedNovels;
+        List<Novel> sortedNovels;
         sortedNovels = novels;
 
         Collections.sort(sortedNovels);
@@ -86,13 +88,67 @@ public class BookStore
         }
     }
 
+    public final void printGroupByDecade(final int decade)
+    {
+        List<Novel> novelsByDecade;
+        int decadeNormalized;
+
+        novelsByDecade = new ArrayList<>();
+        decadeNormalized = decade / ROUND_TO_TEN;
+
+        for(final Novel novel : novels)
+        {
+            if(novel.getYearPublished() / ROUND_TO_TEN == decadeNormalized)
+            {
+                novelsByDecade.add(novel);
+            }
+        }
+
+        for(final Novel novel : novelsByDecade)
+        {
+            System.out.println(novel);
+        }
+    }
+
+    public final void getLongest()
+    {
+        Novel longestNovelTitle;
+        longestNovelTitle = novels.getFirst();
+
+        for (final Novel novel : novels)
+        {
+            if(novel.getTitle().length() > longestNovelTitle.getTitle().length())
+            {
+                longestNovelTitle = novel;
+            }
+        }
+
+        System.out.println("Longest Book Title: " + longestNovelTitle.getTitle());
+    }
+
+    public final boolean isThereABookWrittenIn(final int year)
+    {
+        for (final Novel novel : novels)
+        {
+            if(novel.getYearPublished() == year)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     public static void main(final String[] args)
     {
         final BookStore   bookstore;
         final Novel       oldest;
         final List<Novel> fifteenCharTitles;
 
-        BookStore bookstore = new BookStore("Classic Novels Collection");
+        bookstore = new BookStore("Classic Novels Collection");
+        oldest = bookstore.getOldestBook();
+        fifteenCharTitles = bookstore.getBooksThisLength(15);
 
         System.out.println("All Titles in UPPERCASE:");
         bookstore.printAllTitles();
@@ -110,7 +166,7 @@ public class BookStore
         bookstore.getLongest();
 
         System.out.println("\nIs there a book written in 1950?");
-        System.out.println(bookstore.isThereABookWrittenBetween(1950));
+        System.out.println(bookstore.isThereABookWrittenIn(1950));
 
         System.out.println("\nHow many books contain 'heart'?");
         System.out.println(bookstore.howManyBooksContain("heart"));
@@ -119,11 +175,9 @@ public class BookStore
         System.out.println(bookstore.whichPercentWrittenBetween(1940, 1950) + "%");
 
         System.out.println("\nOldest book:");
-        oldest = bookstore.getOldestBook();
         System.out.println(oldest.getTitle() + " by " + oldest.getAuthorName() + ", " + oldest.getYearPublished());
 
         System.out.println("\nBooks with titles 15 characters long:");
-        fifteenCharTitles = bookstore.getBooksThisLength(15);
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
     }
 };

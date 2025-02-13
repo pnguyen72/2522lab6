@@ -2,6 +2,7 @@ package lab5;
 
 import lab1.Date;
 import lab4.Author;
+import lab4.Book;
 import lab4.Name;
 
 import java.sql.*;
@@ -190,7 +191,7 @@ public class Database
         String title;
         Author author;
         int    Published;
-        Novel  book;
+        Book  book;
 
         authorId  = resultSet.getInt("author");
         title     = resultSet.getString("title");
@@ -198,7 +199,7 @@ public class Database
         Published = resultSet.getInt("yearPublished");
 
         book = new Novel(title, author, Published);
-        return book;
+        return (Novel) book;
     }
 
     /*
