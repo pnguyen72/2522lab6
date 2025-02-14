@@ -2,11 +2,11 @@ package lab5;
 
 import lab4.Author;
 import lab4.Book;
-import lab4.Name;
 
 /**
  * Extends Book from lab 4,
- * overrides compareTo to use titles alphabetical order.
+ * overrides compareTo to use titles alphabetical order,
+ * and toString to print all instance data.
  *
  * @author Felix
  * @author Angelo
@@ -29,8 +29,14 @@ public class Novel extends Book
         super(title, author, yearPublished);
     }
 
-    public String getAuthorName() { return getAuthor().getName().toString(); }
+    public String getAuthorName() {return getAuthor().getName().toString();}
 
     @Override
-    public int compareTo(Book other) { return getTitle().compareTo(other.getTitle()); }
+    public int compareTo(Book other) {return getTitle().compareTo(other.getTitle());}
+
+    @Override
+    public String toString()
+    {
+        return getTitle() + " by " + getAuthorName() + ", " + getYearPublished();
+    }
 }

@@ -36,8 +36,8 @@ public class BookStore
                           Credentials.getUser(),
                           Credentials.getPassword());
 
-        this.name   = name;
-        this.novels = db.getNovels();
+        this.name     = name;
+        this.novels   = db.getNovels();
         this.novelMap = new HashMap<String, Novel>();
         for(final Novel novel : novels)
         {
@@ -47,7 +47,7 @@ public class BookStore
 
     private List<String> getSortedKeyList(HashMap<String, Novel> map)
     {
-        Set<String> keySet = map.keySet();
+        Set<String>  keySet  = map.keySet();
         List<String> keyList = new ArrayList<>(keySet);
         Collections.sort(keyList);
         return keyList;
@@ -102,7 +102,7 @@ public class BookStore
 
             if(thisTitle.contains(target))
             {
-                System.out.println(novel);
+                System.out.println(novel.getTitle());
             }
         }
     }
@@ -118,7 +118,7 @@ public class BookStore
         Collections.sort(sortedNovels);
         for(final Novel novel : sortedNovels)
         {
-            System.out.println(novel);
+            System.out.println(novel.getTitle());
         }
     }
 
@@ -145,7 +145,7 @@ public class BookStore
 
         for(final Novel novel : novelsByDecade)
         {
-            System.out.println(novel);
+            System.out.println(novel.getTitle());
         }
     }
 
@@ -165,9 +165,7 @@ public class BookStore
             }
         }
 
-        System.out.println(longestNovelTitle +
-                           " by " + longestNovelTitle.getAuthorName() +
-                           ", " + longestNovelTitle.getYearPublished());
+        System.out.println(longestNovelTitle.getTitle());
     }
 
     /**
@@ -318,7 +316,7 @@ public class BookStore
         System.out.println(bookstore.whichPercentWrittenBetween(1940, 1950) + "%");
 
         System.out.println("\nOldest book:");
-        System.out.println(oldest.getTitle() + " by " + oldest.getAuthorName() + ", " + oldest.getYearPublished());
+        System.out.println(oldest);
 
         System.out.println("\nBooks with titles 15 characters long:");
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
