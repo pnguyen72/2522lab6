@@ -1,8 +1,6 @@
 package lab5;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Contains a list of many novels and
@@ -20,8 +18,9 @@ public class BookStore
     private static final int PERCENT_MULTIPLIER = 100;
     public static final  int ROUND_TO_TEN       = 10;
 
-    private final String           name;
-    private final ArrayList<Novel> novels;
+    private final String                 name;
+    private final ArrayList<Novel>       novels;
+    private final HashMap<String, Novel> novelMap;
 
     /**
      * Constructs a Bookstore instance,
@@ -39,6 +38,40 @@ public class BookStore
 
         this.name   = name;
         this.novels = db.getNovels();
+        this.novelMap = new HashMap<String, Novel>();
+        for(final Novel novel : novels)
+        {
+            this.novelMap.put(novel.getTitle(), novel);
+        }
+    }
+
+    private List<String> getSortedKeyList(HashMap<String, Novel> map)
+    {
+        Set<String> keySet = map.keySet();
+        List<String> keyList = new ArrayList<>(keySet);
+        Collections.sort(keyList);
+        return keyList;
+    }
+
+    public void displayAllTitles()
+    {
+        List<String> sortedTitles = getSortedKeyList(this.novelMap);
+        for(final String sortedTitle : sortedTitles)
+        {
+            System.out.println(sortedTitle);
+        }
+    }
+
+    public void removeTitlesWithKeyword(final String keyword)
+    {
+        List<String> sortedTitles = getSortedKeyList(this.novelMap);
+        for(final String sortedTitle : sortedTitles)
+        {
+            if(sortedTitle.toLowerCase().contains(keyword.toLowerCase()))
+            {
+                this.novelMap.remove(sortedTitle);
+            }
+        }
     }
 
     /**
