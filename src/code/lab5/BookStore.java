@@ -60,18 +60,6 @@ public class BookStore
     }
 
     /**
-     * Displays all titles in the bookstore in alphabetical order.
-     */
-    public final void displayAllTitles()
-    {
-        List<String> sortedTitles = getSortedKeyList(this.novelMap);
-        for(final String sortedTitle : sortedTitles)
-        {
-            System.out.println(sortedTitle);
-        }
-    }
-
-    /**
      * Removes titles from the bookstore that contain a specified keyword.
      *
      * @param keyword the keyword to search for in titles
@@ -126,13 +114,10 @@ public class BookStore
      */
     public final void printTitlesInAlphaOrder()
     {
-        ArrayList<Novel> sortedNovels;
-        sortedNovels = novels;
-
-        Collections.sort(sortedNovels);
-        for(final Novel novel : sortedNovels)
+        List<String> sortedTitles = getSortedKeyList(this.novelMap);
+        for(final String sortedTitle : sortedTitles)
         {
-            System.out.println(novel.getTitle());
+            System.out.println(sortedTitle);
         }
     }
 
@@ -221,14 +206,15 @@ public class BookStore
     }
 
     /**
-     * Calculates the percentage of books published between two specified years, inclusive.
+     * Calculates the percentage of books published between two specified
+     * years, inclusive.
      *
      * @param first the starting year of the range
-     * @param last the ending year of the range
+     * @param last  the ending year of the range
      * @return the percentage of books published between the two years
      */
     public final double whichPercentWrittenBetween(final int first,
-                                             final int last)
+                                                   final int last)
     {
         int count = COUNTER_INITIATOR;
         for(final Novel novel : novels)
