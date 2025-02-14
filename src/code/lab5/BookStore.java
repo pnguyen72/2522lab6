@@ -38,7 +38,7 @@ public class BookStore
 
         this.name     = name;
         this.novels   = db.getNovels();
-        this.novelMap = new HashMap<String, Novel>();
+        this.novelMap = new HashMap<>();
         for(final Novel novel : novels)
         {
             this.novelMap.put(novel.getTitle(), novel);
