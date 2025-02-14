@@ -314,5 +314,9 @@ public class BookStore
 
         System.out.println("\nBooks with titles 15 characters long:");
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
+
+        System.out.println("\nBook titles NOT containing \"the\", in alpha order:");
+        bookstore.removeTitlesWithKeyword("the");
+        bookstore.printTitlesInAlphaOrder();
     }
 }
