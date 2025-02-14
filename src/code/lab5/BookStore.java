@@ -62,7 +62,7 @@ public class BookStore
     /**
      * Displays all titles in the bookstore in alphabetical order.
      */
-    public void displayAllTitles()
+    public final void displayAllTitles()
     {
         List<String> sortedTitles = getSortedKeyList(this.novelMap);
         for(final String sortedTitle : sortedTitles)
@@ -76,7 +76,7 @@ public class BookStore
      *
      * @param keyword the keyword to search for in titles
      */
-    public void removeTitlesWithKeyword(final String keyword)
+    public final void removeTitlesWithKeyword(final String keyword)
     {
         List<String> sortedTitles = getSortedKeyList(this.novelMap);
         for(final String sortedTitle : sortedTitles)
@@ -207,7 +207,7 @@ public class BookStore
      * @param word the word to search for in titles
      * @return the number of books containing the word in their title
      */
-    public int howManyBooksContain(final String word)
+    public final int howManyBooksContain(final String word)
     {
         int count = COUNTER_INITIATOR;
         for(final Novel novel : novels)
@@ -227,7 +227,7 @@ public class BookStore
      * @param last the ending year of the range
      * @return the percentage of books published between the two years
      */
-    public double whichPercentWrittenBetween(final int first,
+    public final double whichPercentWrittenBetween(final int first,
                                              final int last)
     {
         int count = COUNTER_INITIATOR;
@@ -247,7 +247,7 @@ public class BookStore
      *
      * @return the oldest book in the bookstore
      */
-    public Novel getOldestBook()
+    public final Novel getOldestBook()
     {
         Novel oldestNovel;
         oldestNovel = novels.getFirst();
@@ -268,7 +268,7 @@ public class BookStore
      * @param length the length of the titles to search for
      * @return a list of books with titles of the specified length
      */
-    public List<Novel> getBooksThisLength(final int length)
+    public final List<Novel> getBooksThisLength(final int length)
     {
         final List<Novel> booksThisLength;
         booksThisLength = new ArrayList<>();
