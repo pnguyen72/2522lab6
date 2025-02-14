@@ -59,6 +59,15 @@ public class BookStore
         return keyList;
     }
 
+    public final void displayAllNovels()
+    {
+        List<String> keyList = getSortedKeyList(novelMap);
+        for(final Novel novel : novels)
+        {
+            System.out.println(novel);
+        }
+    }
+
     /**
      * Removes titles from the bookstore that contain a specified keyword.
      *
@@ -318,5 +327,8 @@ public class BookStore
         System.out.println("\nBook titles NOT containing \"the\", in alpha order:");
         bookstore.removeTitlesWithKeyword("the");
         bookstore.printTitlesInAlphaOrder();
+
+        System.out.println("\nPrint all novels:");
+        bookstore.displayAllNovels();
     }
 }
