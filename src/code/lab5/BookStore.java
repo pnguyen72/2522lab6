@@ -45,6 +45,12 @@ public class BookStore
         }
     }
 
+    /**
+     * Sorts the keys of a given HashMap and returns them as a List.
+     *
+     * @param map the HashMap containing the keys to be sorted
+     * @return a List of sorted keys
+     */
     private List<String> getSortedKeyList(HashMap<String, Novel> map)
     {
         Set<String>  keySet  = map.keySet();
@@ -53,6 +59,9 @@ public class BookStore
         return keyList;
     }
 
+    /**
+     * Displays all titles in the bookstore in alphabetical order.
+     */
     public void displayAllTitles()
     {
         List<String> sortedTitles = getSortedKeyList(this.novelMap);
@@ -62,6 +71,11 @@ public class BookStore
         }
     }
 
+    /**
+     * Removes titles from the bookstore that contain a specified keyword.
+     *
+     * @param keyword the keyword to search for in titles
+     */
     public void removeTitlesWithKeyword(final String keyword)
     {
         List<String> sortedTitles = getSortedKeyList(this.novelMap);
@@ -150,7 +164,7 @@ public class BookStore
     }
 
     /**
-     * Finds the longest title in the bookstore.
+     * Finds and prints the longest title in the bookstore.
      */
     public final void getLongest()
     {
@@ -187,13 +201,11 @@ public class BookStore
         return false;
     }
 
-
     /**
-     * Counts how many books contain the word (passed as a parameter) in
-     * their title.
+     * Counts the number of books that contain a specified word in their title.
      *
-     * @param word to be searched in titles as a String
-     * @return the total Books that contain the word in their titles as an int
+     * @param word the word to search for in titles
+     * @return the number of books containing the word in their title
      */
     public int howManyBooksContain(final String word)
     {
@@ -209,13 +221,11 @@ public class BookStore
     }
 
     /**
-     * Gets 2 years as parameters and calculates the percentage of books that
-     * were written
-     * between those two years, inclusive.
+     * Calculates the percentage of books published between two specified years, inclusive.
      *
-     * @param first year of the range inclusive
-     * @param last  year of the range inclusive
-     * @return the percentage as a double
+     * @param first the starting year of the range
+     * @param last the ending year of the range
+     * @return the percentage of books published between the two years
      */
     public double whichPercentWrittenBetween(final int first,
                                              final int last)
@@ -233,9 +243,9 @@ public class BookStore
     }
 
     /**
-     * Returns the oldest book in our book store.
+     * Retrieves the oldest book in the bookstore based on the year published.
      *
-     * @return the oldest book
+     * @return the oldest book in the bookstore
      */
     public Novel getOldestBook()
     {
@@ -253,17 +263,15 @@ public class BookStore
     }
 
     /**
-     * Gets length as a parameter and returns a List of novels which the
-     * titles have the same length
-     * as this parameter
+     * Retrieves a list of books whose titles have a specified length.
      *
-     * @param length of the titles to be added to the List
-     * @return the List of books
+     * @param length the length of the titles to search for
+     * @return a list of books with titles of the specified length
      */
     public List<Novel> getBooksThisLength(final int length)
     {
         final List<Novel> booksThisLength;
-        booksThisLength = new ArrayList<Novel>();
+        booksThisLength = new ArrayList<>();
 
         for(final Novel novel : novels)
         {
@@ -321,4 +329,4 @@ public class BookStore
         System.out.println("\nBooks with titles 15 characters long:");
         fifteenCharTitles.forEach(novel -> System.out.println(novel.getTitle()));
     }
-};
+}
