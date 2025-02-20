@@ -1,5 +1,7 @@
 package lab5;
 
+import lab6.Literature;
+
 import java.util.*;
 
 /**
