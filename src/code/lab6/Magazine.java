@@ -7,6 +7,7 @@ package lab6;
  * @author Justin
  * @author Felix
  * @author Armaan
+ * @version 1.0
  */
 public class Magazine extends Literature
 {
