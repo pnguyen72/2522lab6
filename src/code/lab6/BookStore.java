@@ -3,6 +3,9 @@ package lab6;
 import java.util.*;
 
 /**
+ * Represents a bookstore class that stores pieces of literature.
+ *
+ * @param <T> the type of literature pieces stored in the bookstore
  * @author Justin
  * @author Felix
  * @author Armaan
@@ -10,8 +13,16 @@ import java.util.*;
  */
 public class BookStore<T extends Literature>
 {
+    /**
+     * Nested static class to display bookstore information.
+     */
     static class BookStoreInfo
     {
+        /**
+         * Displays and prints bookstore name and item count.
+         * @param storeName name of the store
+         * @param itemCount total number of items.
+         */
         public void displayInfo(final String storeName, final int itemCount)
         {
             System.out.println("Book Store: " + storeName + ", Items: " + itemCount);
@@ -20,8 +31,19 @@ public class BookStore<T extends Literature>
 
     private List<T> items = new ArrayList<>();
 
+    /**
+     * Inner class to calculate statistics relating to
+     * novels in the bookstore, such as finding the
+     * average title length of the novels.
+     */
     class NovelStatistics
     {
+        /**
+         * Returns the average length of all novels
+         * in the bookstore.
+         * @return the average length of the titles or
+         *          0 if there are no items.
+         */
         public double averageTitleLength()
         {
             if(items.isEmpty())
@@ -40,11 +62,19 @@ public class BookStore<T extends Literature>
 
     }
 
+    /**
+     * Adds an item to the bookstore.
+     * @param item the literature item
+     *             to be added.
+     */
     public void addItem(T item)
     {
         items.add(item);
     }
 
+    /**
+     * Prints the titles of all items.
+     */
     public void printItems()
     {
         for(T item : items)
@@ -90,6 +120,11 @@ public class BookStore<T extends Literature>
         bookTitles.forEach(System.out::println);
     }
 
+    /**
+     * Adds novels to the specified novel collection.
+     * @param novelCollection the collection where the
+     *                        novels will be added.
+     */
     public void addNovelsToCollection(final List<? super Novel> novelCollection)
     {
         for(final T item : items)

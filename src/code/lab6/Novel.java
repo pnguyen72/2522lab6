@@ -1,9 +1,8 @@
 package lab6;
 
 /**
- * Extends Literature,
- * overrides compareTo to use titles alphabetical order,
- * and toString to print all instance data.
+ * Represents a novel with a title that extends
+ * a piece of literature.
  *
  * @author Justin
  * @author Felix
@@ -15,11 +14,21 @@ public class Novel extends Literature
     private final String title;
 
 
+    /**
+     * Constructs a novel with the specified title.
+     * @param title title of novel
+     */
     public Novel(String title)
     {
         this.title = title;
     }
 
+    /**
+     * Gets the title of the novel.
+     * Overrides abstract method from
+     * parent class.
+     * @return the title of the novel.
+     */
     @Override
     public String getTitle()
     {
