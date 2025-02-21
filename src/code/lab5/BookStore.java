@@ -12,6 +12,8 @@ import java.util.*;
  * @author Davi
  * @author Felix
  * @author Angelo
+ * @author Justin
+ * @author Armaan
  * @version 1
  */
 public class BookStore

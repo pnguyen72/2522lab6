@@ -14,6 +14,7 @@ public class Novel extends Literature
 {
     private final String title;
 
+
     public Novel(String title)
     {
         this.title = title;

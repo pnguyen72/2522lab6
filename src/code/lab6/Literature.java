@@ -6,5 +6,10 @@ package lab6;
  */
 public abstract class Literature
 {
+    /**
+     * Abstract method to return the title of the
+     * child class objects
+     * @return title of child class object
+     */
     public abstract String getTitle();
 }
