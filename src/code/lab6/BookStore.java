@@ -34,7 +34,7 @@ public class BookStore<T extends Literature>
         }
     }
 
-    private List<T> items = new ArrayList<>();
+    final private List<T> items = new ArrayList<>();
 
     /**
      * Inner class to calculate statistics relating to
@@ -59,7 +59,7 @@ public class BookStore<T extends Literature>
 
             int totalLength;
             totalLength = 0;
-            for(T item : items)
+            for(final T item : items)
             {
                 totalLength += item.getTitle().length();
             }
@@ -74,7 +74,7 @@ public class BookStore<T extends Literature>
      * @param item the literature item
      *             to be added.
      */
-    public void addItem(T item)
+    public void addItem(final T item)
     {
         items.add(item);
     }
@@ -84,7 +84,7 @@ public class BookStore<T extends Literature>
      */
     public void printItems()
     {
-        for(T item : items)
+        for(final T item : items)
         {
             System.out.println(item.getTitle());
         }
@@ -117,7 +117,7 @@ public class BookStore<T extends Literature>
     {
         // Make a new array of each book's title
         List<String> bookTitles = new ArrayList<>();
-        for(T item : items)
+        for(final T item : items)
         {
             bookTitles.add(item.getTitle());
         }
@@ -176,7 +176,7 @@ public class BookStore<T extends Literature>
 
         System.out.println(System.lineSeparator());
         System.out.println("Novels in Novels Array:");
-        for(Novel novel : novels)
+        for(final Novel novel : novels)
         {
             System.out.println(novel.getTitle());
         }

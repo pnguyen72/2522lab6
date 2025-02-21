@@ -18,7 +18,7 @@ public class Novel extends Literature
      * Constructs a novel with the specified title.
      * @param title title of novel
      */
-    public Novel(String title)
+    public Novel(final String title)
     {
         this.title = title;
     }
