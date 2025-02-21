@@ -1,6 +1,8 @@
 package lab6;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Represents a bookstore class that stores pieces of literature.
@@ -20,12 +22,15 @@ public class BookStore<T extends Literature>
     {
         /**
          * Displays and prints bookstore name and item count.
+         *
          * @param storeName name of the store
          * @param itemCount total number of items.
          */
-        public void displayInfo(final String storeName, final int itemCount)
+        public void displayInfo(final String storeName,
+                                final int itemCount)
         {
-            System.out.println("Book Store: " + storeName + ", Items: " + itemCount);
+            System.out.println("Book Store: " + storeName +
+                               ", Items: " + itemCount);
         }
     }
 
@@ -41,8 +46,9 @@ public class BookStore<T extends Literature>
         /**
          * Returns the average length of all novels
          * in the bookstore.
+         *
          * @return the average length of the titles or
-         *          0 if there are no items.
+         * 0 if there are no items.
          */
         public double averageTitleLength()
         {
@@ -64,6 +70,7 @@ public class BookStore<T extends Literature>
 
     /**
      * Adds an item to the bookstore.
+     *
      * @param item the literature item
      *             to be added.
      */
@@ -122,6 +129,7 @@ public class BookStore<T extends Literature>
 
     /**
      * Adds novels to the specified novel collection.
+     *
      * @param novelCollection the collection where the
      *                        novels will be added.
      */
@@ -179,7 +187,8 @@ public class BookStore<T extends Literature>
         store.items.sort(new Comparator<Literature>()
         {
             @Override
-            public int compare(final Literature o1, final Literature o2)
+            public int compare(final Literature o1,
+                               final Literature o2)
             {
                 return Integer.compare(o1.getTitle().length(),
                                        o2.getTitle().length());

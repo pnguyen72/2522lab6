@@ -1,7 +1,7 @@
 package lab6;
 
 /**
- * Represents a comicbook with a title that
+ * Represents a comic book with a title that
  * extends a piece of literature.
  *
  * @author Justin
@@ -14,8 +14,8 @@ public class ComicBook extends Literature
     private final String title;
 
     /**
-     * Constructs a comicbook object with the specified title.
-     * @param title title of the comicbook.
+     * Constructs a comic book object with the specified title.
+     * @param title title of the comic book.
      */
     public ComicBook (final String title)
     {
@@ -23,10 +23,10 @@ public class ComicBook extends Literature
     }
 
     /**
-     * Gets the title of the comicbook.
+     * Gets the title of the comic book.
      * Overrides abstract method getTitle from
      * parent class.
-     * @return the title of the comicbook
+     * @return the title of the comic book
      */
     @Override
     public String getTitle()
