@@ -116,7 +116,7 @@ public class BookStore<T extends Literature>
     public void printTitlesInAlphaOrder()
     {
         // Make a new array of each book's title
-        List<String> bookTitles = new ArrayList<>();
+        final List<String> bookTitles = new ArrayList<>();
         for(final T item : items)
         {
             bookTitles.add(item.getTitle());
@@ -170,7 +170,7 @@ public class BookStore<T extends Literature>
         store.printTitlesInAlphaOrder();
 
 
-        List<Novel> novels = new ArrayList<>();
+        final List<Novel> novels = new ArrayList<>();
 
         store.addNovelsToCollection(novels);
 
